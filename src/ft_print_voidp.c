@@ -6,7 +6,7 @@
 /*   By: shapetit <shapetit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 11:41:26 by shapetit          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:22 by shapetit         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:03:42 by shapetit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static void	ft_print_hexp(long int n)
 int	ft_print_voidp(long int n)
 {
 	write (1, "0x", 2);
+	if (!n)
+		return(write(1, "(nil)", 5), 3);
 	ft_print_hexp(n);
 	return (ft_hexa_len(n + 2));
 }
